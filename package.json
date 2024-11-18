@@ -13,6 +13,7 @@
     "@usebruno/lang": "0.18.0",
     "js-yaml": "4.1.0",
     "loadash": "1.0.0",
+    "minimist": "1.2.8",
     "nanoid": "3.3.4",
     "xml-formatter": "3.6.3"
   }

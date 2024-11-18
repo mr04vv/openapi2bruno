@@ -2,6 +2,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const importCollection = require('./import-open-api');
 const {envJsonToBru,jsonToBru,jsonToCollectionBru}=require("./util")
+const minimist = require('minimist');
 
 
 
@@ -168,10 +169,17 @@ const generateBruFile =  async (collection, collectionLocation) => {
 }
 };
 
-const run = () => {
-    importCollection("./open-api.yaml").then(({ collection }) => {
-        fs.writeFileSync('collection.json', JSON.stringify(collection, null, 2));
-        generateBruFile(collection, './');
+const run = (args) => {
+    const argv = minimist(args, {
+        string: ['version', 'input', 'config'],
+        alias: { v: 'version', i: 'input', c: 'config', o: 'outputdir' },
+      });
+    const configs = require(path.join(process.cwd(), argv.input))
+
+    configs.map((config) => {
+        importCollection(config.input).then(({ collection }) => {
+            generateBruFile(collection, config.output);
+        })
     })
 }
 
