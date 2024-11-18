@@ -163,6 +163,7 @@ const generateBruFile =  async (collection, collectionLocation) => {
         // lastOpenedCollections.add(collectionPath);
 
         // create folder and files based on collection
+        await parseEnvironments(collection.environments, collectionPath);
         await parseCollectionItems(collection.items, collectionPath);
     } catch (error) {
         return Promise.reject(error);

@@ -6,6 +6,9 @@
   "bin": {
     "openapi2bruno": "./bin/openapi2bruno.js"
   },
+  "scripts": {
+    "sample": "node bin/openapi2bruno.js -i=config.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
