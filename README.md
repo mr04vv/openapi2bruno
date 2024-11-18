@@ -1,5 +1,7 @@
 # openapi2bruno
 
+Generate bruno (`.bru`) file from OpenAPI definition. (`.json`, `.yaml`)
+
 ## Getting Started
 
 ```
