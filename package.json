@@ -1,0 +1,19 @@
+{
+  "name": "openapi2bruno",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "openapi2bruno": "./bin/openapi2bruno.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@usebruno/lang": "0.18.0",
+    "js-yaml": "4.1.0",
+    "loadash": "1.0.0",
+    "nanoid": "3.3.4",
+    "xml-formatter": "3.6.3"
+  }
+}
